@@ -2,9 +2,11 @@ const productsCtrl = {};
 
 // let arrayProducts = require('../data/products');
 
-const Product = require('../models/Product')
+const Product = require('../models/Product');
+const Cart = require('../models/Cart');
 
 let productNow = {};
+let cart = {};
 
 let msg = '';
 
@@ -16,19 +18,30 @@ productsCtrl.getProducts = async (req, res) => {
     }
 
     const arrayProducts = await Product.find();
+    
+    var index = 8;
+   
     res.render('index', {
         arrayProducts: arrayProducts,
-        msg: msg
+        msg: msg,
     });
     // res.json(arrayProducts)
 }
 
+
 productsCtrl.createProduct = async (req, res) => {
 
     const newProduct = new Product(req.body);
-    await newProduct.save().then
 
-    msg = 'Producto Creado';
+    if (newProduct.nombre != '' && newProduct.categoria != '' && newProduct.precio != '' && newProduct.stock != '' && newProduct.descripcion != '' && newProduct.foto != ''){
+
+        await newProduct.save();
+    
+        msg = 'Producto Creado';
+    }
+    else{
+        msg = 'Error al crear, completa los campos';
+    }
     res.redirect('/#productos');
     // res.json('create product');
 }

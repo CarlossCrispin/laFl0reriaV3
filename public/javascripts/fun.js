@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     M.Materialbox.init(img);
     var select = document.querySelectorAll('select');
     M.FormSelect.init(select);
+    var but = document.querySelectorAll('.fixed-action-btn');
+    M.FloatingActionButton.init(but);
 });
 
 
