@@ -1,1 +1,122 @@
-<h1>hola</h1>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/images/icon.svg" />
+    <title>La Floreria</title>
+  </head>
+
+  <body">
+    <div class="navbar-fixed">
+      <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">
+            <span class="material-icons"> emoji_nature </span>La Floreria</a
+          >
+
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Inicio</a></li>
+    
+            <li><a href="/productos/carrito">carrito</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img
+              src="https://images.pexels.com/photos/4466560/pexels-photo-4466560.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            />
+          </div>
+          <!-- <a href="#user"><img class="circle" src="images/yuna.jpg"></a> -->
+          <a href="#name"><span class="white-text name">John Doe</span></a>
+          <a href="#email"
+            ><span class="white-text email">jdandturk@gmail.com</span></a
+          >
+        </div>
+      </li>
+      <li>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a>
+      </li>
+      <li><a href="#!">Second Link</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catalogo</a></li>
+      <li>
+        <a href="#productos">Productos</a>
+      </li>
+      <li><a href="#nosotros">Nosotros</a></li>
+    </ul>
+
+    <h1>hola carrito</h1>
+    <footer class="page-footer grey darken-3" id="nosotros">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">
+              You can use rows and columns here to organize your footer content.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="#inicio">Inicio</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#catalogo"
+                  >Catalogo</a
+                >
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#productos"
+                  >Productos</a
+                >
+              </li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 Carlos Crispin
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="javascripts/fun.js"></script>
+</html>
