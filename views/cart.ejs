@@ -14,12 +14,13 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    
     <link rel="icon" type="image/svg+xml" href="/images/icon.svg" />
     <title>La Floreria</title>
   </head>
 
-  <body">
+  <body onload="M.toast({html: '<%= msg %>'})">
     <div class="navbar-fixed">
       <nav class="nav-extended">
         <div class="nav-wrapper">
@@ -48,7 +49,7 @@
             />
           </div>
           <!-- <a href="#user"><img class="circle" src="images/yuna.jpg"></a> -->
-          <a href="#name"><span class="white-text name">John Doe</span></a>
+          <a href="#name"><span class="white-text name">Usuario : MoocData </span></a>
           <a href="#email"
             ><span class="white-text email">jdandturk@gmail.com</span></a
           >
@@ -59,24 +60,26 @@
           ><i class="material-icons">menu</i></a
         >
       </li>
-      <li>
-        <a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a>
-      </li>
-      <li><a href="#!">Second Link</a></li>
+      
+      
       <li>
         <div class="divider"></div>
       </li>
-      <li><a class="subheader">Subheader</a></li>
-      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#catalogo">Catalogo</a></li>
+    
+      <li><a href="/#inicio">Inicio</a></li>
+      <li><a href="/#catalogo">Catalogo</a></li>
       <li>
-        <a href="#productos">Productos</a>
+        <a href="/#productos">Productos</a>
       </li>
-      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="/#nosotros">Nosotros</a></li>
+      <li><a href="/productos/carrito">Carrito</a></li>
     </ul>
 
-    <h1>hola carrito</h1>
+    <main>
+      <div class="container">
+        
+      </div>
+    </main>
     <footer class="page-footer grey darken-3" id="nosotros">
       <div class="container">
         <div class="row">
@@ -118,5 +121,5 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="javascripts/fun.js"></script>
+  <script src="/javascripts/fun.js"></script>
 </html>

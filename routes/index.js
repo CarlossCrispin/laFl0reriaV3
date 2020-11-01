@@ -12,7 +12,8 @@ router.delete('/:id', product.deleteProduct);
 
 //cart
 router.get('/productos/carrito', cart.getCart);
-/* router.post('/carrito', product.createProduct);
+router.post('/carrito/add', cart.createCart);
+/* 
 router.get('/:id', product.getProduct);
 router.put('/:id', product.editProduct);
 router.delete('/:id', product.deleteProduct); */
