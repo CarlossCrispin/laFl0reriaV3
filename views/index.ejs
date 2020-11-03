@@ -28,7 +28,9 @@
             <a href="#productos">Productos</a>
           </li>
           <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="/productos/carrito">carrito</a></li>
+          <li>
+            <a href='/productos/carrito' class="collection-item"><span class="badge"><i class="large material-icons">shopping_cart</i><%= index %></span> </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -91,9 +93,10 @@
                           <h2>$ <%= product.precio %></h2>
                         </div>
                         <div class="col s4">
-                          <form action="/carrito/add" method="POST">
+                          <form action="/carrito/add" method="POST" >
+                            <input type="text" value="<%= product._id %>" name="id" hidden>
                             <button type="submit" class="btn-floating btn-medium waves-effect waves-light green">
-                              <i class="material-icons">add_shopping_cart</i>
+                              <i class="material-icons">add_shopping_cart </i>
                             </button>
                           </form>
                         </div>
@@ -249,8 +252,8 @@
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large purple" href='/productos/carrito'>
       <div class="row">
-
         <i class="large material-icons">shopping_cart</i>
+        <span><%= index %></span>
       </div>
     </a>
   </div>

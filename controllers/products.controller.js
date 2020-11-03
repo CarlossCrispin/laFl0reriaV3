@@ -18,12 +18,13 @@ productsCtrl.getProducts = async (req, res) => {
     }
 
     const arrayProducts = await Product.find();
-    
-    var index = 8;
+    const arrayCart = await Cart.find();
+    var index = arrayCart.length;
    
     res.render('index', {
         arrayProducts: arrayProducts,
         msg: msg,
+        index: index
     });
     // res.json(arrayProducts)
 }
@@ -51,6 +52,7 @@ productsCtrl.getProduct = async (req, res) => {
 
     const product = await Product.findById(req.params.id);
 
+    console.log(product);
     res.render('edit', {
         productNow: product
     });

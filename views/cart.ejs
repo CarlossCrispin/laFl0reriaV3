@@ -77,7 +77,51 @@
 
     <main>
       <div class="container">
-        
+        <h2>Total : <%= total %> </h2>
+        <table class="responsive-table striped highlight">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Agregar</th>
+            <th>Quitar</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% arrayCart.forEach(function(product) { %>
+          <tr>
+            <td>
+              <img class="materialboxed" data-caption="<%= product.nombre %>" width="50" src="<%= product.foto %>" />
+            </td>
+            <td><%= product.nombre %></td>
+            <td><%= product.precio %></td>
+            <td><%= product.total %></td>
+            <td>
+              <div class="row"></div>
+              <div class="col s6">
+                <form method="POST" action="/" ></form>
+                <button  class="btn-floating pulse green lighten-2">
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+              
+            </td>
+            <td>
+              <div class="col s6">
+                <form action="/" id="delete<%= product.id %>">
+                  <button type="submit" class="btn-floating pulse red lighten-2">
+                    <i class="material-icons">remove </i>
+                  </button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
       </div>
     </main>
     <footer class="page-footer grey darken-3" id="nosotros">
